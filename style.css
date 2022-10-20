@@ -1,0 +1,379 @@
+@import "https://fonts.googleapis.com/css?family=Montserrat:400,700";
+@import "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700";
+@import "https://fonts.googleapis.com/css?family=Kaushan+Script";
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  --hover-color: #95e1d3;
+  transition: all 0.3s ease;
+}
+
+/* G E N R E A L    T E X T */
+.text-wrapper h5 {
+  font-weight: 400;
+  font-family: "Kaushan Script", cursive;
+  font-size: 1.5rem;
+}
+.text-wrapper h4 {
+  font-weight: 700;
+  font-size: 1.8rem;
+  position: relative;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+}
+.text-wrapper h4::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 50px;
+  height: 2px;
+  background: #f37a7a;
+  transform: translateX(-50%);
+}
+.text-wrapper p {
+  max-width: 45rem;
+  margin: 0 auto 2.5rem;
+  color: #999;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+body {
+  font-family: Montserrat, sans-serif;
+}
+
+.pre-line::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  width: 40px;
+  height: 2px;
+  background: #f37a7a;
+  transform: translateX(-50%);
+}
+
+/* O V E R L A Y */
+.overlay-card figure img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.overlay-card figure::after {
+  content: "";
+  position: absolute;
+  background-color: #95e1d3;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  z-index: -1;
+}
+.overlay-card figure:hover img {
+  transform: translateX(-10px) translateY(-10px);
+}
+.overlay-card figure .overlay {
+  /* The overlay effect (full height and width) - lays on top of the container and over the image */
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  background: linear-gradient(to bottom, rgba(243, 129, 129, 0.9019607843), rgba(252, 227, 138, 0.9019607843));
+}
+.overlay-card figure:hover .overlay {
+  /* When you mouse over the container, transition plus fade in the overlay, icon and text*/
+  opacity: 1;
+  transform: translateX(-10px) translateY(-10px);
+}
+.overlay-card figure .icon {
+  /* The icon + text inside the overlay is positioned in the middle vertically and horizontally */
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* ====================================================================================== */
+/* N A V - B A R    S E C T I O N     S T Y L I N G */
+.NavBar .container-fluid {
+  background-image: url(images/bg-header.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.overlay {
+  /* The overlay effect (full height and width) - lays on top of the container and over the image */
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(243, 129, 129, 0.9019607843), rgba(252, 227, 138, 0.9019607843));
+}
+
+.carousel-item h4 {
+  font-size: 3rem;
+  font-family: "Kaushan Script", cursive;
+}
+.carousel-item h3 {
+  font-size: 4rem;
+}
+.carousel-item button {
+  font-size: 1rem;
+  border-radius: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .carousel-item h3 {
+    font-size: 6rem;
+  }
+}
+.carouse-btn-container {
+  width: 24%;
+}
+.carouse-btn-container h5 {
+  font-size: 0.8rem;
+}
+.carouse-btn-container span {
+  font-weight: 700;
+  font-size: 1rem;
+  padding-right: 0.5rem;
+}
+.carouse-btn-container button {
+  height: 2px;
+  border: none;
+  position: relative;
+}
+.carouse-btn-container button:active .carouse-btn-container button::after, .carouse-btn-container button:hover .carouse-btn-container button::after {
+  position: absolute;
+  width: 25%;
+  height: 2px;
+  color: red;
+}
+
+/* ====================================================================================== */
+/* S E P R A T O R    S E C T I O N     S T Y L I N G */
+.container-fluid {
+  background-color: #95e1d3;
+}
+
+.text-container {
+  width: 20%;
+}
+.text-container h3 {
+  font-size: 3rem;
+}
+
+/* ====================================================================================== */
+/* D E S I G N    S E C T I O N     S T Y L I N G */
+.design .container-fluid {
+  height: 100vh;
+  background-image: url(images/unique-design/bg-unique-design.jpg);
+}
+
+.design-tablet-img {
+  width: 380px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+}
+
+.design-mobile-img {
+  width: 170px;
+  bottom: -10%;
+  left: 50%;
+  margin: 0;
+  margin-left: 9rem;
+}
+
+@media screen and (max-width: 992px) {
+  .design-mobile-img {
+    width: 120px;
+    bottom: -7%;
+    margin-left: 8.7rem;
+  }
+  .design-tablet-img {
+    width: 350px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .design-mobile-img {
+    width: 80px;
+    bottom: -5%;
+    margin-left: 6.25rem;
+  }
+  .design-tablet-img {
+    width: 250px;
+  }
+}
+/* ====================================================================================== */
+/* W H A T - W E - D O    S E C T I O N     S T Y L I N G */
+.accordion-body {
+  height: 7rem;
+}
+.accordion-body::-webkit-scrollbar {
+  width: 7px;
+}
+.accordion-body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.accordion-body::-webkit-scrollbar-thumb {
+  background: rgb(59, 172, 180);
+}
+
+/* ====================================================================================== */
+/* Q U O T E S    S E C T I O N     S T Y L I N G */
+.quotes .container-fluid {
+  background-color: rgb(236, 234, 234);
+}
+
+.quotes-curousel-icon {
+  width: 40%;
+  height: 40%;
+}
+
+/* ====================================================================================== */
+/* O U R - T E A M    S E C T I O N     S T Y L I N G */
+.icon-custom {
+  width: 30px;
+  height: 30px;
+}
+
+/* ====================================================================================== */
+/* O U R - T E A M    S E C T I O N     S T Y L I N G */
+.testimonial .carousel-control-next-icon,
+.testimonial .carousel-control-prev-icon {
+  filter: invert(1);
+}
+
+/* ====================================================================================== */
+/* B R A N D    S E C T I O N     S T Y L I N G */
+.brand .container-fluid {
+  background-color: rgb(236, 234, 234);
+}
+.brand .container-fluid figure {
+  min-width: 150px;
+}
+.brand .container-fluid figure img:hover {
+  transform: scale(1.1, 1.1);
+}
+
+/* ====================================================================================== */
+/* O U R - W O R K    S E C T I O N     S T Y L I N G */
+@media screen and (min-width: 768px) {
+  .our-work-imgs-wrapper {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  .our-work-imgs-wrapper .fig-3 {
+    grid-area: 2/1/4/2;
+  }
+}
+@media screen and (min-width: 992px) {
+  .our-work-imgs-wrapper {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+  }
+  .our-work-imgs-wrapper .fig-3 {
+    grid-area: 1/3/3/4;
+  }
+}
+.our-work-imgs-wrapper figure {
+  margin: 0;
+  position: relative;
+}
+.our-work-imgs-wrapper figure .icon {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.our-work-imgs-wrapper .fig-up .overlay {
+  top: -100%;
+}
+.our-work-imgs-wrapper .fig-up:hover .overlay {
+  top: 0%;
+}
+.our-work-imgs-wrapper .fig-dwn .overlay {
+  top: 100%;
+}
+.our-work-imgs-wrapper .fig-dwn:hover .overlay {
+  top: 0%;
+}
+
+/* ====================================================================================== */
+/* C L I E N T S    S E C T I O N     S T Y L I N G */
+.clients {
+  background-image: url(images/happy-client/bg-happy-client.jpg);
+}
+.clients .clients-cards-wrapper h4::after {
+  content: "";
+  position: absolute;
+  left: 7%;
+  bottom: 0;
+  width: 50px;
+  height: 2px;
+  background: #f37a7a;
+  transform: translateX(-50%);
+}
+
+/* ====================================================================================== */
+/* B L O G    S E C T I O N     S T Y L I N G */
+.number-card {
+  top: 55%;
+  left: -3%;
+}
+
+/* ====================================================================================== */
+/* M A P    S E C T I O N     S T Y L I N G */
+.map .container-fluid {
+  background-image: url(images/map/bg-map.jpg);
+}
+.map .container-fluid .map-icon {
+  width: 5%;
+  height: 5%;
+  color: #f37a7a;
+}
+.map .container-fluid h4 {
+  color: #f37a7a;
+}
+
+/* ====================================================================================== */
+/* F O O T E R    S E C T I O N     S T Y L I N G */
+.input-group-btn button {
+  border-radius: 0%;
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+}
+
+.instagram-photos-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 2px;
+}
+
+@media screen and (min-width: 768px) {
+  .instagram-photos-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 2px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .instagram-photos-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 2px;
+  }
+}/*# sourceMappingURL=style.css.map */
